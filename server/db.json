@@ -1,0 +1,23 @@
+{
+  "regist": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "login": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "checkuserinfo": {
+    "name": "typicode"
+  },
+
+  "profile": {
+    "name": "typicode"
+  }
+}

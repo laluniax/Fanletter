@@ -1,10 +1,15 @@
-import { createStore, combineReducers } from "redux";
-import letters from "redux/modules/letters";
+import letters from "redux/modules/letterSlice";
 import member from "redux/modules/member";
-import { devToolsEnhancer } from "redux-devtools-extension";
-
-const rootReducer = combineReducers({ letters, member });
-
-const store = createStore(rootReducer, devToolsEnhancer());
-
+import { configureStore } from "@reduxjs/toolkit";
+import openLoginToggle from "../modules/login";
+import auth from "redux/modules/authSlice";
+//툴킷으로 스토어 구성
+const store = configureStore({
+  reducer: {
+    letters,
+    member,
+    openLoginToggle,
+    auth,
+  },
+});
 export default store;
