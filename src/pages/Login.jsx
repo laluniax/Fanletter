@@ -1,5 +1,5 @@
 import axios from "axios";
-import { React, useEffect, useState } from "react";
+import { React, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { signIn } from "redux/modules/authSlice";
@@ -7,23 +7,10 @@ import { changeBooleanState } from "redux/modules/login";
 import { styled } from "styled-components";
 
 function Login() {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const auth = useSelector((state) => state.auth);
   //  처음 마운트 되었을 때 , 로컬스토리지에 있는 accessToken 가져와줘
-  const saveLocalStorage = JSON.parse(localStorage.getItem("accessToken"));
-  console.log(localStorage.getItem("accessToken"));
-  useEffect(() => {
-    const accessTokenFromLocalStorage = JSON.parse(
-      localStorage.getItem("accessToken")
-    );
-    console.log(accessTokenFromLocalStorage);
-    // if (accessTokenFromLocalStorage) {
-    //   // 로컬스토리지 getItem -> json형식으로 받아와서 Json.parse로 해야함!
-    //   dispatch(signIn(accessTokenFromLocalStorage));
-    // }
-  }, []);
 
   //회원가입
   const onClickRegisterHandler = async () => {

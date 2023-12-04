@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 export default function Router() {
   const auth = useSelector((state) => state.auth);
-
   return (
     <BrowserRouter>
       <Routes>

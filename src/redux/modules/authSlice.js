@@ -13,7 +13,7 @@ const loginStatus = createSlice({
   initialState,
   reducers: {
     signIn: (state, action) => {
-      state.accessToken = action.payload.accessToken;
+      state.accessToken = action.payload;
     },
   },
 });
